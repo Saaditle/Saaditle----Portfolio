@@ -81,19 +81,11 @@
           <h2>Contact</h2>
           <p>Want to collaborate or hire me? Reach out and I’ll get back to you soon.</p>
           <div class="cta">
-            <a class="btn primary" href="mailto:irfansaad373@gmail.com">Email</a>
-            <a class="btn" href="https://discord.com/users/661606080421429259" target="_blank" rel="noopener">Discord: Saaditle</a>
-            <a class="btn" href="https://www.roblox.com/users/474016096/profile" target="_blank" rel="noopener">Roblox: Saaditle</a>
+            <a class="btn primary" href="mailto:">Email</a>
+            <a class="btn" href="#" aria-disabled="true">Discord: Saaditle</a>
+            <a class="btn" href="https://www.roblox.com/search/users?keyword=Saaditle" target="_blank" rel="noopener">Roblox: Saaditle</a>
           </div>
-          <div class="inline-links">
-            <a class="muted" href="mailto:irfansaad373@gmail.com">Open default Mail app</a>
-            <span class="sep">·</span>
-            <a class="muted" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=irfansaad373@gmail.com&su=Commission%20Inquiry" target="_blank" rel="noopener">Open in Gmail</a>
-            <span class="sep">·</span>
-            <a class="muted" href="https://outlook.office.com/mail/deeplink/compose?to=irfansaad373@gmail.com&subject=Commission%20Inquiry" target="_blank" rel="noopener">Open in Outlook</a>
-            <span class="sep">·</span>
-            <button id="copyEmail" class="linklike" type="button" aria-label="Copy email address">Copy email</button>
-          </div>
+          <p class="muted">Provide your email (and Discord ID if you want a direct profile link) to fully enable contact.</p>
         </div>
         <div class="card">
           <h3>Availability</h3>
@@ -112,21 +104,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    (function(){
-      var btn = document.getElementById('copyEmail');
-      if (!btn) return;
-      var original = btn.textContent;
-      btn.addEventListener('click', async function(){
-        try {
-          await navigator.clipboard.writeText('irfansaad373@gmail.com');
-          btn.textContent = 'Copied!';
-          setTimeout(function(){ btn.textContent = original; }, 1500);
-        } catch(e) {
-          btn.textContent = 'Press Ctrl+C';
-          setTimeout(function(){ btn.textContent = original; }, 1500);
-        }
-      });
-    })();
   </script>
 </body>
 </html>

@@ -99,6 +99,15 @@ a { color: inherit; text-decoration: none; }
 /* Partner credit */
 .partner-credit { text-align: center; color: var(--muted); font-size: 12px; padding: 8px 0 24px; }
 
+/* Partner island */
+.partner-island { padding: 0 0 28px; }
+.partner-card { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.partner-name { margin: 4px 0 0; }
+.partner-name a { color: var(--text); }
+.partner-name a:hover { text-decoration: underline; }
+.partner-meta .small { font-size: 12px; }
+.partner-badge { font-size: 24px; opacity: 0.8; }
+
 /* Inline helper links under contact */
 .inline-links { margin-top: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .inline-links .sep { color: var(--border); }

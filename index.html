@@ -16,6 +16,7 @@
       <a class="brand" href="#">Saaditle</a>
       <nav class="menu">
         <a href="#about">About</a>
+        <a href="#projects">Projects</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -30,6 +31,7 @@
           <p class="lead">Hi, I am Saaditle, I'm a builder for Roblox. I've enjoyed making and creating games since I was 14, and I'm now 17—focused on low‑poly builds and constantly improving. From Maldives (UTC+5).</p>
           <div class="cta">
             <a class="btn primary" href="#gallery">View Gallery</a>
+            <a class="btn" href="#projects">See Projects</a>
             <a class="btn" href="#contact">Hire Me</a>
           </div>
         </div>
@@ -39,11 +41,53 @@
       </div>
     </section>
 
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid projects">
+          <article class="card project">
+            <header class="project-head">
+              <h3>Tycoon RNG</h3>
+              <div class="badges">
+                <span class="badge">50M+ visits</span>
+                <span class="pill">4 days</span>
+              </div>
+            </header>
+            <div class="project-body">
+              <p>Stud‑styled Tycoon game combining RNG and Tycoon with replaceable droppers, upgraders, and selling stations.</p>
+              <ul>
+                <li>Built entire map from scratch.</li>
+                <li>Added two quest caves, a cozy tree house, and a weather machine (CSG modeling).</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card project">
+            <header class="project-head">
+              <h3>Ball Tower Defense</h3>
+              <div class="badges">
+                <span class="badge">100M+ visits</span>
+                <span class="pill">8 days</span>
+              </div>
+            </header>
+            <div class="project-body">
+              <p>Stud‑style tower defense using a mix of CSG and Blender models. Use different ball‑towers to defeat the attacking squares.</p>
+              <ul>
+                <li>Created first, second, and Lab Attack maps.</li>
+                <li>Built with a friend.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="about" class="section">
       <div class="container two-col">
         <div>
           <h2>About</h2>
           <p class="muted">From Maldives (UTC+5)</p>
+          <p>I’m a developer who brings your ideas to life. I have 1 year of building experience in Roblox Studio and 2 months in Blender. My mission is to turn your ideas into in‑game experiences.</p>
           <p>I've enjoyed making and creating games since I was 14, but I never had the opportunity to immerse myself for real until now, at the age of 17.</p>
           <p>I work with low‑poly builds and I'm constantly looking to improve. I love creating and building things, and I'm looking forward to continuing to grow.</p>
           <p>I currently have experience, but I will have some soon.</p>
@@ -81,11 +125,19 @@
           <h2>Contact</h2>
           <p>Want to collaborate or hire me? Reach out and I’ll get back to you soon.</p>
           <div class="cta">
-            <a class="btn primary" href="mailto:">Email</a>
-            <a class="btn" href="#" aria-disabled="true">Discord: Saaditle</a>
-            <a class="btn" href="https://www.roblox.com/search/users?keyword=Saaditle" target="_blank" rel="noopener">Roblox: Saaditle</a>
+            <a class="btn primary" href="mailto:irfansaad373@gmail.com">Email</a>
+            <a class="btn" href="https://discord.com/users/661606080421429259" target="_blank" rel="noopener">Discord: Saaditle</a>
+            <a class="btn" href="https://www.roblox.com/users/474016096/profile" target="_blank" rel="noopener">Roblox: Saaditle</a>
           </div>
-          <p class="muted">Provide your email (and Discord ID if you want a direct profile link) to fully enable contact.</p>
+          <div class="inline-links">
+            <a class="muted" href="mailto:irfansaad373@gmail.com">Open default Mail app</a>
+            <span class="sep">·</span>
+            <a class="muted" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=irfansaad373@gmail.com&su=Commission%20Inquiry" target="_blank" rel="noopener">Open in Gmail</a>
+            <span class="sep">·</span>
+            <a class="muted" href="https://outlook.office.com/mail/deeplink/compose?to=irfansaad373@gmail.com&subject=Commission%20Inquiry" target="_blank" rel="noopener">Open in Outlook</a>
+            <span class="sep">·</span>
+            <button id="copyEmail" class="linklike" type="button" aria-label="Copy email address">Copy email</button>
+          </div>
         </div>
         <div class="card">
           <h3>Availability</h3>
@@ -104,6 +156,22 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      var btn = document.getElementById('copyEmail');
+      if (!btn) return;
+      var original = btn.textContent;
+      btn.addEventListener('click', async function(){
+        try {
+          await navigator.clipboard.writeText('irfansaad373@gmail.com');
+          btn.textContent = 'Copied!';
+          setTimeout(function(){ btn.textContent = original; }, 1500);
+        } catch(e) {
+          btn.textContent = 'Press Ctrl+C';
+          setTimeout(function(){ btn.textContent = original; }, 1500);
+        }
+      });
+    })();
   </script>
+  <div class="partner-credit">Partner: <a href="https://n0nl.github.io/Portfolio/#projects" target="_blank" rel="noopener">Noni</a></div>
 </body>
 </html>

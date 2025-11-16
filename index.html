@@ -179,21 +179,25 @@
     // Open lightbox when clicking on gallery images
     galleryImages.forEach(img => {
       img.addEventListener('click', function() {
+        alert('Image clicked!'); // Debug test
         lightbox.style.display = 'block';
         lightboxImg.src = this.src;
         lightboxImg.alt = this.alt;
+        document.body.style.overflow = 'hidden'; // Prevent body scroll
       });
     });
 
     // Close lightbox when clicking on close button
     lightboxClose.addEventListener('click', function() {
       lightbox.style.display = 'none';
+      document.body.style.overflow = ''; // Restore body scroll
     });
 
     // Close lightbox when clicking on the background
     lightbox.addEventListener('click', function(e) {
       if (e.target === lightbox) {
         lightbox.style.display = 'none';
+        document.body.style.overflow = ''; // Restore body scroll
       }
     });
 
@@ -201,6 +205,7 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && lightbox.style.display === 'block') {
         lightbox.style.display = 'none';
+        document.body.style.overflow = ''; // Restore body scroll
       }
     });
   </script>

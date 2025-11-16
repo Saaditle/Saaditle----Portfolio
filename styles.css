@@ -148,6 +148,8 @@ a { color: inherit; text-decoration: none; }
   background-color: rgba(0, 0, 0, 0.95);
   cursor: pointer;
   overflow: auto;
+  justify-content: center;
+  align-items: center;
 }
 .lightbox-content {
   position: relative;
